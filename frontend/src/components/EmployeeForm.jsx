@@ -49,7 +49,7 @@ export default function EmployeeForm({ employee, onSubmit, onCancel }) {
     try {
       await onSubmit({ ...values, salary: Number(values.salary) });
     } catch (err) {
-      // Show server-side field errors (e.g. duplicate email) next to the field.
+      
       if (err instanceof ApiError && err.details.length) {
         setErrors(Object.fromEntries(err.details.map((d) => [d.field, d.message])));
       } else {

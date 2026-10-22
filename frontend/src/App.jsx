@@ -19,15 +19,15 @@ export default function App() {
   const [deleteError, setDeleteError] = useState('');
   const [toast, setToast] = useState('');
 
-  // Debounce typing so we don't call the API on every keystroke.
+  
   useEffect(() => {
     const t = setTimeout(() => setQuery(search.trim()), 300);
     return () => clearTimeout(t);
   }, [search]);
 
-  // Load employees whenever the query changes or a reload is requested.
+  
   useEffect(() => {
-    let ignore = false; // prevents an older, slower response overwriting a newer one
+    let ignore = false; 
     setLoading(true);
     setLoadError('');
     api

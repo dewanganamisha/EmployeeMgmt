@@ -1,11 +1,11 @@
-// All communication with the backend lives here.
+
 const BASE = import.meta.env.VITE_API_URL || '/api';
 
 export class ApiError extends Error {
   constructor(message, status, details = []) {
     super(message);
     this.status = status;
-    this.details = details; // [{ field, message }]
+    this.details = details; 
   }
 }
 

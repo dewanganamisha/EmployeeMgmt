@@ -1,6 +1,5 @@
 const { Pool } = require('pg');
 
-// pg reads PGHOST, PGPORT, PGUSER, PGPASSWORD and PGDATABASE from the environment.
 const pool = new Pool();
 
 pool.on('error', (err) => {
